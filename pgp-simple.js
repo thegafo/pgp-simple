@@ -1,6 +1,8 @@
 'use strict';
 
 const openpgp = require('openpgp');
+openpgp.config.show_comment = false;
+openpgp.config.show_version = false;
 
 class PGP {
 

@@ -1,7 +1,7 @@
 
 # pgp-simple
 
-> Simplified wrapper around OpenPGP.js for secure encrypting and decrypting.
+> Simplified wrapper around OpenPGP.js for secure encryption and decryption.
 
 
 ### Installation
@@ -13,7 +13,7 @@ npm install pgp-simple
 ### Usage
 
 ```javascript
-const PGP = require('./pgp-simple');
+const PGP = require('pgp-simple');
 
 (async () => {
     
@@ -31,4 +31,20 @@ const PGP = require('./pgp-simple');
     console.log(decrypted);
 
 })();
+```
+
+## Browser
+
+Build for browser:
+
+```bash
+npm run build
+```
+
+```html
+<script src="dist/openpgp.min.js"></script>
+<script src="dist/pgp-simple.js"></script>
+<script>
+    PGP.generateKey().then(console.log);
+</script>
 ```
